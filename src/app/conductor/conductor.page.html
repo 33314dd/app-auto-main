@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="titulo">Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+
+
+
+  <h1 class="center-content" style="padding-bottom: 50px"> Bienvenido/a {{ conductorInfoReceived?.name }}</h1>
+  <ion-list [inset]="true">
+    <ion-list-header>
+      <h1>Tus Datos</h1>
+    </ion-list-header>
+    <ion-item>
+
+      <ion-label>Usuario:  {{ conductorInfoReceived?.username }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre:  {{ conductorInfoReceived?.name }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido:  {{ conductorInfoReceived?.last_name }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoría	:  {{ conductorInfoReceived?.type }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list [inset]="true">
+    <ion-list-header>
+      <h1>Tú vehículo</h1>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Marca: {{ conductorInfoReceived?.auto?.marca }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Modelo: {{ conductorInfoReceived?.auto?.modelo }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Año: {{ conductorInfoReceived?.auto?.anio }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Matricula: {{ conductorInfoReceived?.auto?.matricula }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
